@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  background: #080A09;
+}
+
+body {
+  @apply bg-bg text-soft font-sans antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid #B5F36A;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Radial green glow used on hero and CTA sections */
+.glow {
+  background: radial-gradient(
+    60% 60% at 50% 0%,
+    rgba(36, 75, 42, 0.75),
+    transparent 70%
+  );
+}
+
+/* Buttons */
+.btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition;
+}
+
+.btn-p {
+  @apply btn bg-lime text-bg hover:bg-green;
+}
+
+.btn-s {
+  @apply btn border border-white/10 text-soft hover:border-lime/50 hover:text-lime;
+}
+
+/* Utility classes */
+.label {
+  @apply text-xs font-semibold uppercase tracking-widest text-lime;
+}
+
+.wrap {
+  @apply mx-auto w-full max-w-6xl px-5;
+}
